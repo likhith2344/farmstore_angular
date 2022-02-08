@@ -1,0 +1,31 @@
+<div class="container mt-4" style="background-color: white;" *ngFor="let item of items">
+
+
+    <div class="d-flex justify-content-between">
+  
+      <div class="col">
+        <h5 style="color: cornflowerblue;">Name:</h5>
+        <p>{{item.itemName}}
+        </p>
+  
+      </div>
+      <div class="col">
+        <h5 style="color: cornflowerblue;">Category: </h5>
+        <p>{{item.itemCategory}}
+        </p>
+  
+      </div>
+      <div class="col">
+        <h5 style="color: cornflowerblue;">Price:$</h5>
+        <p>{{item.itemPrice}}
+        </p>
+        <div>
+          <button class="btn btn-danger" (click)='clearCart(item.itemId)'>Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn-success btn-rounded btn-lg btn-block" (click)="placeOrder()">
+    <b>PLACE ORDER</b></button>
+  <button type="button" class="btn-primary btn-rounded btn-lg btn-block" (click)="back()">
+    <b>BACK</b></button>
